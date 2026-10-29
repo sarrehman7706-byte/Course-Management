@@ -1,0 +1,2 @@
+if (!(Test-Path .gitignore)) { New-Item .gitignore -ItemType File }
+if (!(Select-String -Path .gitignore -Pattern '^\.env$' -Quiet)) { Add-Content .gitignore "`n.env" }
